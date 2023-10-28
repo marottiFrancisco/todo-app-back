@@ -21,7 +21,12 @@ app.post('/tareas/:id', (req, res) => {
   res.json(TareasController.completarTareaById(req.params.id)) 
 })
 
+app.delete('/tareas/:id', (req, res) => {
+  res.json(TareasController.eliminarTareaById(req.params.id)) 
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
+
 

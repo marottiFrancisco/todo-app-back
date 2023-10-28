@@ -23,7 +23,6 @@ let tareas = [{
     prioridad: 'alta'
 }]
 
-
 function getTareas(){
     return tareas
 }
@@ -48,4 +47,10 @@ function completarTareaById(id){
     return tareas
 }
 
-export const TareasController = {getTareas, getTareasById, createTarea, completarTareaById}
+function eliminarTareaById(id){
+    const nuevasTareas = tareas.filter(tarea => tarea.id !== id)
+    tareas = nuevasTareas
+    return tareas
+}
+
+export const TareasController = {getTareas, getTareasById, createTarea, completarTareaById, eliminarTareaById}
