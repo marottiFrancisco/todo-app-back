@@ -1,5 +1,5 @@
 export const tareas = [{
-    id: 1,
+    id: '1',
     titulo: 'trabajar',
     descripcion: 'horario de 9 a 18',
     asignado: 'Andy',
@@ -7,7 +7,7 @@ export const tareas = [{
     prioridad: 'alta'
 },
 {
-    id: 2,
+    id: '2',
     titulo: 'cocinar',
     descripcion: 'milanesas',
     asignado: 'Martin',
@@ -15,7 +15,7 @@ export const tareas = [{
     prioridad: 'baja'
 },
 {
-    id: 3,
+    id: '3',
     titulo: 'estudiar',
     descripcion: 'matematicas',
     asignado: 'Facundo',
