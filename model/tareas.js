@@ -1,4 +1,4 @@
-export const tareas = [{
+export let tareas = [{
     id: '1',
     titulo: 'trabajar',
     descripcion: 'horario de 9 a 18',

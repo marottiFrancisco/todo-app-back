@@ -13,5 +13,16 @@ function createTarea(tarea){
     return tareas
 }
 
+function completarTareaById(id){
+    const nuevasTareas = tareas.map(tarea => {
+        if (tarea.id === id) {
+            return {completado: true, ...tarea}
+        }
+        return tarea
+    })
+    tareas.
+    tareas.push(...nuevasTareas)
+    return tareas
+}
 
-export const TareasController = {getTareas, getTareasById, createTarea}
+export const TareasController = {getTareas, getTareasById, createTarea, completarTareaById}

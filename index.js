@@ -17,6 +17,10 @@ app.post('/tareas', jsonParser, (req, res) => {
   res.json(TareasController.createTarea(req.body)) 
 })
 
+app.post('/tareas/:id', (req, res) => {
+  res.json(TareasController.completarTareaById(req.params.id)) 
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
