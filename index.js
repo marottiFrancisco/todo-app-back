@@ -1,10 +1,10 @@
 import express from "express" 
-
+import {tareas} from './model/tareas.js'
 const app = express()
 const port = 3000
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
+app.get('/tareas', (req, res) => {
+  res.json(tareas)
 })
 
 app.listen(port, () => {
