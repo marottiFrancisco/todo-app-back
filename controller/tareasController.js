@@ -53,4 +53,18 @@ function eliminarTareaById(id){
     return tareas
 }
 
-export const TareasController = {getTareas, getTareasById, createTarea, completarTareaById, eliminarTareaById}
+function modificarTareaById(id, nuevaTarea){
+    let tareaFinal 
+    const nuevasTareas = tareas.map(tarea => {
+        if (tarea.id === id) {
+            tareaFinal = { ...tarea, ...nuevaTarea}
+            return tareaFinal
+        }
+        return tarea
+    })
+    tareas = nuevasTareas
+    return tareaFinal
+}
+
+
+export const TareasController = {getTareas, getTareasById, createTarea, completarTareaById, eliminarTareaById,modificarTareaById}

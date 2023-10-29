@@ -25,6 +25,10 @@ app.delete('/tareas/:id', (req, res) => {
   res.json(TareasController.eliminarTareaById(req.params.id)) 
 })
 
+app.put('/tareas/:id', jsonParser, (req, res) => {
+  res.json(TareasController.modificarTareaById(req.params.id, req.body)) 
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
